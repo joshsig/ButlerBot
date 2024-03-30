@@ -29,13 +29,13 @@
 	</path>
 	
 	<target name="clean">
-		<delete dir="${bin.dir}" excludes="*.sh"/>
+		<delete dir="${bin.dir}"/>
 		<echo>delete complete!</echo>
 	</target>
 	
 	<target name="compile" depends="clean">
 		<mkdir dir="${bin.dir}"/>
-		<javac target="1.8" source="1.8" classpathref="build.lib" srcdir="${src.dir}" destdir="${bin.dir}" encoding="utf-8"/>
+		<javac classpathref="build.lib" srcdir="${src.dir}" destdir="${bin.dir}" encoding="utf-8"/>
 	</target>
 	
 	<target name="send" depends="setconf,send_rpi,send_edison">
@@ -49,7 +49,7 @@
 		    addproperty="pratform.sota"
 		  />
 		<input message="Please enter ip:"
-			defaultvalue="192.168.1."
+			defaultvalue="192.168.137.148"
 		    addproperty="scp.server"/>
 		  <condition property="is.Rpi">
 	        <equals arg1="${pratform.sota}" arg2="Rpi" />

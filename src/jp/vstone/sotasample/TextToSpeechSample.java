@@ -8,15 +8,16 @@ import jp.vstone.sotatalk.TextToSpeechSota;
 
 public class TextToSpeechSample {
 	static final String TAG = "SpeechRecSample";
-	public static void main(String[] args) {
-		CPlayWave.PlayWave(TextToSpeechSota.getTTS("やっほー"),true);
-		CPlayWave.PlayWave(TextToSpeechSota.getTTS("僕の名前はSotaです。"),true);
-		byte[] data = TextToSpeechSota.getTTS("これから、よろしくね！");
-		if(data == null){
-			CRobotUtil.Log(TAG,"ERROR");
-		}
-		CPlayWave.PlayWave(data,true);
 
-		CPlayWave.PlayWave(TextToSpeechSota.getTTS("僕の名前はSotaです。僕の名前はSotaです。僕の名前はSotaです。僕の名前はSotaです。僕の名前はSotaです。僕の名前はSotaです。僕の名前はSotaです。僕の名前はSotaです。"),true);
+	public static void main(String[] args) {
+		CPlayWave.PlayWave(TextToSpeechSota.getTTS("Hello World!"), true);
+		CPlayWave.PlayWave(TextToSpeechSota.getTTS("Hello World!"), true);
+		byte[] data = TextToSpeechSota.getTTS("Hello World!");
+		if (data == null) {
+			CRobotUtil.Log(TAG, "ERROR");
+		}
+		CPlayWave.PlayWave(data, true);
+
+		CPlayWave.PlayWave(TextToSpeechSota.getTTS("Hello World! Hello World! Hello World! Hi IM BUTLER BOT!"), true);
 	}
 }
