@@ -45,11 +45,11 @@
 		<input
 		    message="Select Pratform?"
 		    validargs="Rpi,Edison"
-			defaultvalue="Rpi"
+			defaultvalue="Edison"
 		    addproperty="pratform.sota"
 		  />
 		<input message="Please enter ip:"
-			defaultvalue="192.168.137.148"
+			defaultvalue="192.168.100.250"
 		    addproperty="scp.server"/>
 		  <condition property="is.Rpi">
 	        <equals arg1="${pratform.sota}" arg2="Rpi" />
